@@ -109,13 +109,16 @@
       <div class="container">
         <div>
           <h1>Memes Classification Project</h1>
-          <p>This is the coder replcation project for DSRG. The DSRG is a weakly-supervised semantic segmentaion method,
-            where the original publication has been accepted by CVPR in 2018. <a href="https://github.com/terenceylchow124/DSRG_PyTorch">[Codes]</a>
+          <p> Meme analysis has become the essential research topic. It contains both graphic representation and
+            embedded text description, and often carries more than one message
+            spreading emotional influences on every single individual who read that meme.
+            In this project, I propose the <strong>Memotion Multimodal Model (M4 Model)</strong> for
+            humor detection on memotion dataset. <a href="https://github.com/terenceylchow124/Meme-MultiModal">[Codes]</a>
           </p>
         </div>
         <div class="row">
           <div class="centered">
-          <img src="assets/img/Project/Project4/project4_dsrg.png" alt="project1_overview" title="Workflow" />
+          <img src="assets/img/Project/Project5/project5_m4.jpg" alt="project1_overview" title="M4 Model" width="610" height="450" />
           </div>
         </div>
         <div class ="row">
@@ -123,97 +126,56 @@
           <h4 class="rheading">Details<span></span></h4>
           <div class="tabbable tabs-top">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i>DSRG</a></li>
-              <li><a href="#two" data-toggle="tab">PyTorch Design</a></li>
+              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i>Memotion dataset</a></li>
+              <li><a href="#two" data-toggle="tab">M4 Model</a></li>
+              <li><a href="#three" data-toggle="tab">PyTorch Feature</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="one">
-                <li>A Semantic segmentaion is a task of per-pixel classification of an image.</li>
-                <li>A weakly-supervsied learning means to give indirect supervision, e.g., Bounding boxes, Scribbles, Points, Image tags.
-                </li>
-                <li>
-                  A cam method is used in this method to generate "seed cues" as initial supervision for a deep segmentaion model.
-                </li>
-                <li>
-                  In DSRG, the seeded region growing mechanism is utilized to let the network generate new seeds in training process.
-                </li>
-                <p>&nbsp;</p>
+                <li>The main task of this project is multimodal binary classification of memotion dataset [1].</li>
+                <li>Given the visual and textual information of each meme, the target is to know whether the given meme is humorous or non-humorous.</li>
+                <li>Memotion dataset consists of 6,992 and 2,000 memes of training and test set.</li>
                 <div class="centered">
-                  <br><img src="assets/img/Project/Project4/project4_segmentation.png" alt=""
+                  <br><img src="assets/img/Project/Project5/project5_memotion.png" alt=""
                   title="Supported Libraries" width="510" height="350"/><br>
                 </div>
               </div>
               <div class="tab-pane" id="two">
-                <li>This PyTorch replication enables user to train DSRG network by using multiple GPUs.</li>
-                <li>It also provides a flexibility for using any segmentation dataset, other than VOC 2012.</li>
-                <li>Users can track and visualize few metrics, e.g., training loss, and few sample images, by connecting to your local tensorboard</li>
-                <li>Users can also use our scripts file for evaluating the network's performance, and obtain the mIoU result directly.</li><br>
+                <li>There are three highlights of contributions of M4 model.</li>
+                <li><strong>Visuo-Lingual Extractor:</strong> Uses VGG16 to learn visual feature,
+                  and ALBERT transformer to extract textual feature of embeded text of an image.</li>
+                <li><strong>Multimodal Feature Fusion:</strong> Applies Gated Multimodal Layer (GML) [3] to combine two sets of features vectors.</li>
+                <li><strong>Pretrained Transformer:</strong> Incorporates a transfer-learning technique to firstly
+                  train a ALBERT model by text dataset [2], and migrate it to M4.</li><br>
+                  <div class="centered">
+                    <br><img src="assets/img/Project/Project5/project5_multimodal.gif" alt=""
+                    title="Blackbox" width="568" height="320"/><br>
+                  </div>
+              </div>
+              <div class="tab-pane" id="three">
+                  <li>Uses Huggingface library [4] for developing most of the componts, e.g., dataset, model network, training and test process.</li>
+                  <li>Designs different methods for multimodal fusion.</li>
+                  <li>Provides both the pretraining of ALBERT and transfer-learning of M4 in our code.</li><br>
+                  <div class="centered">
+                    <br><img src="assets/img/Project/Project5/hf.png" alt=""
+                    title="Blackbox" width="517" height="166"/><br>
+                  </div>
+              </div>
               <div class="centered">
               </div><br>
               </div>
-            </div>
+
           </div>
           <!-- end tab -->
         </div>
         </div>
         <div class="row">
-        <div class="span12">
-          <h4 class="rheading">Results<span></span></h4>
-          <div class="row">
-              <ul class="portfolio-area da-thumbs">
-                <li class="portfolio-item" data-id="id-0" data-type="web">
-                    <div class="span6">
-                      <div class="thumbnail">
-                        <div class="image-wrapp">
-                          <img src="assets/img/Project/Project4/project4_result1.jpg" alt="Portfolio name" title="Home Page" />
-                          <article class="da-animate da-slideFromRight">
-                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project4/project4_result1.jpg">
-                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                    </a>
-                            <a href="publications.html">
-                    </a>
-                            <div class="hidden-tablet">
-                              <p>
-                                Home Page
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                </li>
-                <li class="portfolio-item" data-id="id-0" data-type="brand">
-                  <div class="span6">
-                    <div class="thumbnail">
-                      <div class="image-wrapp">
-                        <img src="assets/img/Project/Project4/project4_result2.jpg" alt="Portfolio name" title="Face Detection" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project4/project4_result2.jpg">
-                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                          </a>
-                          <a href="publications.html"></a>
-                          <div class="hidden-tablet">
-                            <p>Face Detection</p>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-        </div>
-        </div>
-        <div class="row">
              <h4 class="rheading">References<span></span></h4>
              <div class="span12">
-                 <li>DSRG conference Paper (CVPR2018)
-                   <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Weakly-Supervised_Semantic_Segmentation_CVPR_2018_paper.pdf">[1]</a>
-                 </li>
-                 <li>DSRG offical implementation (Caffe framework) <a href="https://github.com/speedinghzl/DSRG">[2]</a></li>
-                 <li>DSRG reimplementation (TensorFlow) <a href="https://github.com/xtudbxk/DSRG-tensorflow">[3]</a></li>
-                 <li>SEC reimplementation (PyTorch) <a href="https://github.com/halbielee/SEC_pytorch">[4]</a></li>
-                 <li>Semantic segmentaion <a href="https://data-flair.training/blogs/image-segmentation-machine-learning/">[5]</a></li>
+                 <li>Memotion dataset <a href="https://www.kaggle.com/williamscott701/memotion-dataset-7k">[1]</a></li>
+                 <li>Reddit dataset (text-based humor detection dataset) <a href="https://github.com/orionw/RedditHumorDetection">[2]</a></li>
+                 <li>Gate Multimodal Layer (GML) paper <a href="https://arxiv.org/pdf/1702.01992.pdf">[3]</a></li>
+                 <li>Huggingface documentation <a href="https://huggingface.co/">[4]</a></li>
              </div>
         </div>
         </div>
