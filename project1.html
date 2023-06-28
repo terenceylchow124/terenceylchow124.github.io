@@ -676,3 +676,339 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Terence Chow's Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- styles -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="assets/css/flexslider.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/color/default.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+  <script src="assets/js/can.js"></script>
+
+  <!-- =======================================================
+    Theme Name: Lumia
+    Theme URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- Navbar
+    ================================================== -->
+      <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- logo -->
+            <div class="logo">
+              <a href="index.html">
+								<img src="assets/img/dummies/logo.png" alt="" width="100" height="26" />
+							</a>
+            </div>
+            <!-- end logo -->
+
+            <!-- top menu -->
+            <div class="navigation">
+              <nav>
+                <ul class="nav topnav">
+                  <li>
+                    <a href="index.html"><i class="icon-home"></i> Home </a>
+                  </li>
+                  <li>
+                    <a href="about.html"><i class="icon-leaf"></i>About me</a>
+                  </li>
+                  <li class="active">
+                    <a href="project.html"><i class="icon-briefcase"></i>Project</a>
+                  </li>
+                  <li>
+                    <a href="blog.html"><i class="icon-book"></i>Blog</a>
+                  </li>
+                  <li>
+                    <a href="contact.html"><i class="icon-envelope-alt"></i> Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end menu -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Subintro
+================================================== -->
+    <section id="subintro">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+              <li><a href="project.html">Project</a><i class="icon-angle-right"></i></li>
+              <li class="active">Remote Control Airship Andriod Application</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <div class="search">
+              <form action="https://www.google.com/search" method="get" class="input-append">
+                <input class="search-form" id="appendedPrependedInput" type="text" name="q" placeholder="Search here.." />
+                <button class="btn btn-dark" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="maincontent">
+      <div class="container">
+        <div>
+          <h1>Remote Control Airship Andriod Application</h1>
+          <p>In this project, I lead a team of three to design and develop a remote-control airship from scratch.
+            My main responsibiliy is to focus on implementing a homemade Android Mobile Application which connects and communicates with Arduino-Board.
+            Inside the app, a joystick button smoothly controls the speeds of a pair of motors to move forward
+             & backward while additional arrow buttons drives the airsship up & down. I use Android-Studio as the main platform, for which JAVA is a selected language for development (i.e. functionality)
+              while XML is used for front-end layout(i.e. User Interface (UI)). <a href="https://github.com/terenceylchow124?tab=repositories">[Codes]</a>
+          </p>
+          <div class="centered">
+          <img src="assets/img/Project/Project1/project1_overview.jpg" alt="project1_overview" title="Workflow" />
+          </div>
+        </div>
+        <div class="span12">
+          <h4 class="rheading">Details<span></span></h4>
+          <div class="tabbable tabs-top">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i> Bluetooth Communication</a></li>
+              <li><a href="#two" data-toggle="tab">User Interface</a></li>
+              <li><a href="#three" data-toggle="tab">Others</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="one">
+                <li>
+                  Our app controls with airship via bluetooth,
+                  specifically <strong>bluetooth low energy (BLE)</strong> moduel will be used in arudino board.
+                </li>
+                <li>
+                  Our app searches and connects the particular BLE devices with MAC address (or name).
+                </li>
+                <li>
+                  For data sending to and receiving from the board, our app write data (motor'speeds) to an <strong>unique numeric ID (UUID)</strong> .
+                </li>
+                <div class="centered">
+                  <img src="assets/img/Project/Project1/project1_bt.jpg" alt="" title="Bluetooth Module" width="310" height="150"/>
+                </div><br>
+              </div>
+              <div class="tab-pane" id="two">
+                <li>Design a single activity (page) app with clean & funcational UI.</li>
+                <li>Implement wireless communication function to send and receive bluetooth signal through APIs.</li>
+                <li>Adopt and modify from open-source joystick design to write data to Arudino-Board.</li>
+                <li>Install and run the app on a real device.</li><br>
+                <div class="centered">
+                  <img src="assets/img/Project/Project1/project1_app.jpg" alt="" title="Android-APP" width="380" height="320" />
+                </div><br>
+              </div>
+              <div class="tab-pane" id="three">
+                <p>Although I mainly focus on software implementations, I also cooperate with my partners as a team. </p>
+                <li>
+                  For the hardware, we design a schematic & create the <strong>PCB</strong> layouts using <strong>DesignSpark PCB</strong>. I
+                    assist in circuit soldering & 3D-printing.
+                </li>
+                <li>
+                  For data-communication, we control motors using <strong>Arduino</strong>.
+                  My teammate works on server-side, while I contribute on client-side (i.e. APP).
+                </li>
+                <li>
+                  Beside, I organize & guide the testing experiments on data-communication between APP & mother board.
+                </li><br>
+                <div class="centered">
+                    <img src="assets/img/Project/Project1/project1_pcb.jpg" alt="" title="Bluetooth Module" style="margin-right: 1.5em" width="320" height="160"&nbsp&nbsp&nbsp/>
+                  <img src="assets/img/Project/Project1/project1_3dprint.JPG" alt="" title="Bluetooth Module" width="250" height="200"/>
+                </div><br>
+              </div>
+            </div>
+          </div>
+          <!-- end tab -->
+        </div>
+        <div class="span12">
+          <h4 class="rheading">Results<span></span></h4>
+          <div class="row">
+              <ul class="portfolio-area da-thumbs">
+                <li class="portfolio-item" data-id="id-0" data-type="web">
+                    <div class="span4">
+                      <div class="thumbnail">
+                        <div class="image-wrapp">
+                          <img src="assets/img/Project/Project1/project1_result1.JPG" alt="Portfolio name" title="Mother-Board" />
+                          <article class="da-animate da-slideFromRight">
+                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project1/project1_result1.JPG">
+                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                    </a>
+                            <a href="publications.html">
+                    </a>
+                            <div class="hidden-tablet">
+                              <p>
+                                Mother-Board
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li class="portfolio-item" data-id="id-0" data-type="web">
+                    <div class="span4">
+                      <div class="thumbnail">
+                        <div class="image-wrapp">
+                          <img src="assets/img/Project/Project1/project1_result2.jpeg".jpg" alt="Portfolio name" title="Installation" />
+                          <article class="da-animate da-slideFromRight">
+                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project1/project1_result2.jpeg">
+                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                    </a>
+                            <a href="publications.html">
+                    </a>
+                            <div class="hidden-tablet">
+                              <p>
+                                Installation
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li class="portfolio-item" data-id="id-0" data-type="brand">
+                  <div class="span4">
+                    <div class="thumbnail">
+                      <div class="image-wrapp">
+                        <img src="assets/img/Project/Project1/project1_result3.jpeg" alt="Portfolio name" title="Flying" />
+                        <article class="da-animate da-slideFromRight">
+                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project1/project1_result3.jpeg">
+                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                          </a>
+                          <a href="publications.html"></a>
+                          <div class="hidden-tablet">
+                            <p>Flying</p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12">
+            <div class="centered">
+              <a href="project.html" class="btn btn-large e_bounce">See other projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer
+ ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span9">
+            <div class="widget">
+              <h5>Interesting pages</h5>
+              <ul class="regular">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="publications.html">Find my paper</a></li>
+                <li><a href="project.html">My recent project</a></li>
+                <li><a href="blog.html">Share my life</a></li>
+                <li><a href="contact.html">Get in touch with me</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="widget">
+              <h5>How to find me</h5>
+              <p>
+                <i class="icon-envelope-alt"></i> ychow@lakeheadu.ca
+              </p>
+            </div>
+            <div class="widget">
+              <ul class="social">
+                <li><a href="https://www.facebook.com/terence.chow.583" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/terence-chow-48a61b1b2/" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
+                <li><a href="https://github.com/terenceylchow124?tab=repositories" data-placement="bottom" title="Github"><i class="icon-pinterest icon-square icon-32"></i></a></li>
+                <li><a href="#" data-placement="bottom" title="Google scholar"><i class="icon-google-plus icon-square icon-32"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="verybottom">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <p>
+                &copy; Lumia - All right reserved
+              </p>
+            </div>
+            <div class="span6">
+              <div class="pull-right">
+                <div class="credits">
+                  <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
+                  -->
+                  Created by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  <p>Customized by Terence CHOW</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- end wrapper -->
+  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/raphael-min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/google-code-prettify/prettify.js"></script>
+  <script src="assets/js/jquery.elastislide.js"></script>
+  <script src="assets/js/jquery.prettyPhoto.js"></script>
+  <script src="assets/js/jquery.flexslider.js"></script>
+  <script src="assets/js/jquery-hover-effect.js"></script>
+  <script src="assets/js/portfolio/jquery.quicksand.js"></script>
+  <script src="assets/js/portfolio/setting.js"></script>
+  <script src="assets/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
