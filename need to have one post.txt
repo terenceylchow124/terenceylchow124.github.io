@@ -1,0 +1,1 @@
+https://css-tricks.com/creating-an-editable-webpage-with-google-spreadsheets-and-tabletop-js/

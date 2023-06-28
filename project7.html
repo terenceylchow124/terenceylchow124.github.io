@@ -64,9 +64,6 @@
                   <li>
                     <a href="about.html"><i class="icon-leaf"></i>About me</a>
                   </li>
-                  <li>
-                    <a href="publications.html"><i class="icon-cog"></i>Publications</i></a>
-                  </li>
                   <li class="active">
                     <a href="project.html"><i class="icon-briefcase"></i>Project</a>
                   </li>
@@ -94,7 +91,7 @@
             <ul class="breadcrumb">
               <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
               <li><a href="project.html">Project</a><i class="icon-angle-right"></i></li>
-              <li class="active">Amazon based Facial Recognition Andriod Application</li>
+              <li class="active">Sudoku Automationc using ML algorithms</li>
             </ul>
           </div>
           <div class="span4">
@@ -111,84 +108,66 @@
     <section id="maincontent">
       <div class="container">
         <div>
-          <h1>Amazon based Facial Recognition Andriod Application</h1>
-          <p>In this project, I design and develop the mobile
-            application system which communicates with the <strong>cloud system (AWS)</strong> as the supporting backend
-            system to perform the <strong>real time face recognition (FR) functionality</strong>.
-            The FR is implemented by two differnet algorithms:
-            i) PCA model, construct and train a PCA model with the hybrid facail database,
-            ii) Deep-Learning model, adopt a provided API, Amazon Rekognition.
-            <a href="https://github.com/terenceylchow124?tab=repositories">[Codes]</a>
+          <h1>Sudoku Automationc using ML algorithms</h1>
+          <p>This is the coder replcation project for DSRG. The DSRG is a weakly-supervised semantic segmentaion method,
+            where the original publication has been accepted by CVPR in 2018. <a href="https://github.com/terenceylchow124/DSRG_PyTorch">[Codes]</a>
           </p>
+        </div>
+        <div class="row">
           <div class="centered">
-          <img src="assets/img/Project/Project3/project3_whole.png" alt="" title="Amazon Cloud Server Architecture" width="700" height="600"/>
+          <img src="assets/img/Project/Project4/project4_dsrg.png" alt="project1_overview" title="Workflow" />
           </div>
         </div>
+        <div class ="row">
         <div class="span12">
           <h4 class="rheading">Details<span></span></h4>
           <div class="tabbable tabs-top">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i> Face Recognition</a></li>
-              <li><a href="#two" data-toggle="tab">Amazon Cloud Server (AWS) </a></li>
-              <li><a href="#three" data-toggle="tab">Mobile Application</a></li>
+              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i>DSRG</a></li>
+              <li><a href="#two" data-toggle="tab">PyTorch Design</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="one">
-                <li>
-                 Construct the hybrid database by Labeled Faces in the Wild (LFW), Yale Face Database (YFD) & self-collected photos.
+                <li>A Semantic segmentaion is a task of per-pixel classification of an image.</li>
+                <li>A weakly-supervsied learning means to give indirect supervision, e.g., Bounding boxes, Scribbles, Points, Image tags.
                 </li>
                 <li>
-                  Conduct image-preprocessing by color transformation, facail image cropping, resizing & image vectorizing.
+                  A cam method is used in this method to generate "seed cues" as initial supervision for a deep segmentaion model.
                 </li>
                 <li>
-                  Implement the Principal Component Analysis (PCA) model by vector normalizing, covariance matrix computing & largest eigenvector selecting.
+                  In DSRG, the seeded region growing mechanism is utilized to let the network generate new seeds in training process.
                 </li>
-                <li>
-                  Perform face-recognition by encoding given images (I), calculating the Euclidean distance between vectors & resulting label with shortest distance.
-                </li><br>
+                <p>&nbsp;</p>
                 <div class="centered">
-                  <img src="assets/img/Project/Project3/project3_hybrid.jpg" alt="" title="Hybrid Database" style="margin-right: 1.5em" width="350" height="200"/>
-                  <img src="assets/img/Project/Project3/project3_pca.jpg" alt="" title="PCA" width="350" height="200"/>
-                </div><br>
+                  <br><img src="assets/img/Project/Project4/project4_segmentation.png" alt=""
+                  title="Supported Libraries" width="510" height="350"/><br>
+                </div>
               </div>
               <div class="tab-pane" id="two">
-                <p>For the backend system, I design an AWS architecture to perform the FR function and response user
-                  only name by intergrating three services. Apart from self-design PCA algorithm, user can chose to finish FR by an Amazon service,
-                  i.e. Amazon Rekognition</p>
-                <li>Implement PCA computing using <strong>Amazon Lambda</strong> which designed as an event-driven service.</li>
-                <li>Store image data including hybrid database and user's uploaded images using <strong>Amazon S3</strong>.</li>
-                <li>Connect with Andriod App using <strong>Amazon API-Gateway</strong>, for which user connects automatically and can upload face images on our system.</li>
-                <li>Apply a built-in Amazon API, <strong>Amazon Rekognition</strong>, for recongitze celebrity faces, which is generally accurate than ours.</li><br>
-                <div class="centered">
-                  <img src="assets/img/Project/Project3/project3_Recoknition.png" alt="" title="Face Recoknition API Architecture" style="margin-right: 1.5em" width="410" height="390" &nbsp&nbsp&nbsp/>
-                  <img src="assets/img/Project/Project3/project3_apigateway.jpg" alt="" title="Amazon API-Gateway" width="400" height="390" /><br>
-                </div><br>
-              </div>
-              <div class="tab-pane" id="three">
-                <li>Activates an front camera, detects human facas by using <strong>OpenCv</strong> based classifer (HAAR cascades classifier)</li>
-                <li>Pre-process selected images by cropping and color converting.</li>
-                <li>Uploads the pre-processed iamges to default Amazon server. (specifically AWS S3)</li>
-                <li>Sends request to perform FR to AWS & receives response which is the name string from server.</li>
-                <br>
-                <div class="centered">
-                    <img src="assets/img/Project/Project3/project3_app.png" alt="" title="Mobile App" style="margin-right: 1.5em" width="440" height="200"/>
-                </div><br>
+                <li>This PyTorch replication enables user to train DSRG network by using multiple GPUs.</li>
+                <li>It also provides a flexibility for using any segmentation dataset, other than VOC 2012.</li>
+                <li>Users can track and visualize few metrics, e.g., training loss, and few sample images, by connecting to your local tensorboard</li>
+                <li>Users can also use our scripts file for evaluating the network's performance, and obtain the mIoU result directly.</li><br>
+              <div class="centered">
+              </div><br>
               </div>
             </div>
           </div>
           <!-- end tab -->
         </div>
+        </div>
+        <div class="row">
         <div class="span12">
           <h4 class="rheading">Results<span></span></h4>
           <div class="row">
               <ul class="portfolio-area da-thumbs">
                 <li class="portfolio-item" data-id="id-0" data-type="web">
-                    <div class="span4">
+                    <div class="span6">
                       <div class="thumbnail">
                         <div class="image-wrapp">
-                          <img src="assets/img/Project/Project3/project3_app_homes.jpg" alt="Portfolio name" title="Home Page" />
+                          <img src="assets/img/Project/Project4/project4_result1.jpg" alt="Portfolio name" title="Home Page" />
                           <article class="da-animate da-slideFromRight">
-                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3/project3_app_home.jpg">
+                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project4/project4_result1.jpg">
                     <i class="icon-zoom-in icon-rounded icon-48 active"></i>
                     </a>
                             <a href="publications.html">
@@ -204,12 +183,12 @@
                     </div>
                 </li>
                 <li class="portfolio-item" data-id="id-0" data-type="brand">
-                  <div class="span4">
+                  <div class="span6">
                     <div class="thumbnail">
                       <div class="image-wrapp">
-                        <img src="assets/img/Project/Project3/project3_app_detects.jpg" alt="Portfolio name" title="Face Detection" />
+                        <img src="assets/img/Project/Project4/project4_result2.jpg" alt="Portfolio name" title="Face Detection" />
                         <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3/project3_app_detect.jpg">
+                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project4/project4_result2.jpg">
                             <i class="icon-zoom-in icon-rounded icon-48 active"></i>
                           </a>
                           <a href="publications.html"></a>
@@ -221,99 +200,27 @@
                     </div>
                   </div>
                 </li>
-                <li class="portfolio-item" data-id="id-0" data-type="web">
-                    <div class="span4">
-                      <div class="thumbnail">
-                        <div class="image-wrapp">
-                          <img src="assets/img/Project/Project3/project3_app_captures.jpeg" alt="Portfolio name" title="Captured & Pre-processd" />
-                          <article class="da-animate da-slideFromRight">
-                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3/project3_app_capture.jpeg">
-                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                    </a>
-                            <a href="publications.html">
-                    </a>
-                            <div class="hidden-tablet">
-                              <p>
-                                Captured and Pre-processed image
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                </li>
               </ul>
             </div>
-            <div class="row">
-              <ul class="portfolio-area da-thumbs">
-                <li class="portfolio-item" data-id="id-0" data-type="web">
-                    <div class="span4">
-                      <div class="thumbnail">
-                        <div class="image-wrapp">
-                          <img src="assets/img/Project/Project3/project3_app_uploads.jpeg" alt="Portfolio name" title="Image Uploaded" />
-                          <article class="da-animate da-slideFromRight">
-                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3/project3_app_upload.jpeg">
-                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                    </a>
-                            <a href="publications.html">
-                    </a>
-                            <div class="hidden-tablet">
-                              <p>
-                                Image Uploaded
-                              </p>
-                            </div>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                </li>
-                <li class="portfolio-item" data-id="id-0" data-type="brand">
-                  <div class="span4">
-                    <div class="thumbnail">
-                      <div class="image-wrapp">
-                        <img src="assets/img/Project/Project3/project3_app_pcas.jpeg" alt="Portfolio name" title="PCA" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3/project3_app_pca.jpeg">
-                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                          </a>
-                          <a href="publications.html"></a>
-                          <div class="hidden-tablet">
-                            <p>PCA</p>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="portfolio-item" data-id="id-0" data-type="brand">
-                  <div class="span4">
-                    <div class="thumbnail">
-                      <div class="image-wrapp">
-                        <img src="assets/img/Project/Project3/project3_app_rekognitions.jpg" alt="Portfolio name" title="Face Rekognition" />
-                        <article class="da-animate da-slideFromRight">
-                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3/project3_app_rekognition.jpg">
-                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                          </a>
-                          <a href="publications.html"></a>
-                          <div class="hidden-tablet">
-                            <p>Face Rekognition</p>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-
+        </div>
         </div>
         <div class="row">
-          <div class="span12">
+             <h4 class="rheading">References<span></span></h4>
+             <div class="span12">
+                 <li>DSRG conference Paper (CVPR2018)
+                   <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Weakly-Supervised_Semantic_Segmentation_CVPR_2018_paper.pdf">[1]</a>
+                 </li>
+                 <li>DSRG offical implementation (Caffe framework) <a href="https://github.com/speedinghzl/DSRG">[2]</a></li>
+                 <li>DSRG reimplementation (TensorFlow) <a href="https://github.com/xtudbxk/DSRG-tensorflow">[3]</a></li>
+                 <li>SEC reimplementation (PyTorch) <a href="https://github.com/halbielee/SEC_pytorch">[4]</a></li>
+                 <li>Semantic segmentaion <a href="https://data-flair.training/blogs/image-segmentation-machine-learning/">[5]</a></li>
+             </div>
+        </div>
+        </div>
+        <div class="row">
             <div class="centered">
               <a href="project.html" class="btn btn-large e_bounce">See other projects</a>
             </div>
-          </div>
         </div>
       </div>
     </section>

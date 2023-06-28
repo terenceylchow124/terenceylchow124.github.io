@@ -25,6 +25,10 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+  <script src="assets/js/can.js"></script>
+
   <!-- =======================================================
     Theme Name: Lumia
     Theme URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
@@ -86,7 +90,8 @@
           <div class="span8">
             <ul class="breadcrumb">
               <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li class="active">Project</i></li>
+              <li><a href="project.html">Project</a><i class="icon-angle-right"></i></li>
+              <li class="active">Memes Classification Project</li>
             </ul>
           </div>
           <div class="span4">
@@ -102,99 +107,82 @@
     </section>
     <section id="maincontent">
       <div class="container">
-        <div class="row">
-          <ul class="portfolio-area da-thumbs">
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project1/project_combine.jpg" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project1.html">
-							<i class="icon-link icon-rounded icon-48 active"></i>
-							</a>
-                      <div class="hidden-tablet">
-                        <p>Remote Control Airship Andriod Application</p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project3/project3_combine.jpg" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project3.html">
-              <i class="icon-link icon-rounded icon-48 active"></i>
-              </a>
-                      <div class="hidden-tablet">
-                        <p>Amazon based Facial Recognition Andriod Application</p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+        <div>
+          <h1>Memes Classification Project</h1>
+          <p> Meme analysis has become the essential research topic. It contains both graphic representation and
+            embedded text description, and often carries more than one message
+            spreading emotional influences on every single individual who read that meme.
+            In this project, I propose the <strong>Memotion Multimodal Model (M4 Model)</strong> for
+            humor detection on memotion dataset. <a href="https://github.com/terenceylchow124/Meme-MultiModal">[Codes]</a>
+          </p>
         </div>
         <div class="row">
-          <ul class="portfolio-area da-thumbs">
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project2/project2_combine.jpg" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project2.html">
-							<i class="icon-link icon-rounded icon-48 active"></i>
-							</a>
-                      <div class="hidden-tablet">
-                        <p>PoseNet Mini Game Application</p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project4/project4_combine.png" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project4.html">
-              <i class="icon-link icon-rounded icon-48 active"></i>
-              </a>
-                      <div class="hidden-tablet">
-                        <p>
-                          PyTorch Replication of Deep Seeded Region Growing (DSRG)
-                        </p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="span12">
-            <div class="centered">
-              <div class="pagination">
-                <ul>
-                  <li><a href="#">Prev</a></li>
-                  <li class="active"><a>1</a></li>
-                  <li><a href="project2_front.html">2</a></li>
-                  <!-- <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>-->
-                  <li><a href="project2_front.html">Next</a></li>
-                </ul>
-              </div>
-            </div>
+          <div class="centered">
+          <img src="assets/img/Project/Project5/project5_m4.jpg" alt="project1_overview" title="M4 Model" width="610" height="450" />
           </div>
+        </div>
+        <div class ="row">
+        <div class="span12">
+          <h4 class="rheading">Details<span></span></h4>
+          <div class="tabbable tabs-top">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i>Memotion dataset</a></li>
+              <li><a href="#two" data-toggle="tab">M4 Model</a></li>
+              <li><a href="#three" data-toggle="tab">PyTorch Feature</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="one">
+                <li>The main task of this project is multimodal binary classification of memotion dataset [1].</li>
+                <li>Given the visual and textual information of each meme, the target is to know whether the given meme is humorous or non-humorous.</li>
+                <li>Memotion dataset consists of 6,992 and 2,000 memes of training and test set.</li>
+                <div class="centered">
+                  <br><img src="assets/img/Project/Project5/project5_memotion.png" alt=""
+                  title="Supported Libraries" width="510" height="350"/><br>
+                </div>
+              </div>
+              <div class="tab-pane" id="two">
+                <li>There are three highlights of contributions of M4 model.</li>
+                <li><strong>Visuo-Lingual Extractor:</strong> Uses VGG16 to learn visual feature,
+                  and ALBERT transformer to extract textual feature of embeded text of an image.</li>
+                <li><strong>Multimodal Feature Fusion:</strong> Applies Gated Multimodal Layer (GML) [3] to combine two sets of features vectors.</li>
+                <li><strong>Pretrained Transformer:</strong> Incorporates a transfer-learning technique to firstly
+                  train a ALBERT model by text dataset [2], and migrate it to M4.</li><br>
+                  <div class="centered">
+                    <br><img src="assets/img/Project/Project5/project5_multimodal.gif" alt=""
+                    title="Blackbox" width="568" height="320"/><br>
+                  </div>
+              </div>
+              <div class="tab-pane" id="three">
+                  <li>Uses Huggingface library [4] for developing most of the componts, e.g., dataset, model network, training and test process.</li>
+                  <li>Designs different methods for multimodal fusion.</li>
+                  <li>Provides both the pretraining of ALBERT and transfer-learning of M4 in our code.</li><br>
+                  <div class="centered">
+                    <br><img src="assets/img/Project/Project5/hf.png" alt=""
+                    title="Blackbox" width="517" height="166"/><br>
+                  </div>
+              </div>
+              <div class="centered">
+              </div><br>
+              </div>
+
+          </div>
+          <!-- end tab -->
+        </div>
+        </div>
+        <div class="row">
+             <h4 class="rheading">References<span></span></h4>
+             <div class="span12">
+                 <li>Memotion dataset <a href="https://www.kaggle.com/williamscott701/memotion-dataset-7k">[1]</a></li>
+                 <li>Reddit dataset (text-based humor detection dataset) <a href="https://github.com/orionw/RedditHumorDetection">[2]</a></li>
+                 <li>Gate Multimodal Layer (GML) paper <a href="https://arxiv.org/pdf/1702.01992.pdf">[3]</a></li>
+                 <li>Huggingface documentation <a href="https://huggingface.co/">[4]</a></li>
+             </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="centered">
+              <a href="project.html" class="btn btn-large e_bounce">See other projects</a>
+            </div>
         </div>
       </div>
     </section>
@@ -208,7 +196,7 @@
               <h5>Interesting pages</h5>
               <ul class="regular">
                 <li><a href="about.html">About me</a></li>
-                <li><a href="portfolio-detail.html">Find my paper</a></li>
+                <li><a href="publications.html">Find my paper</a></li>
                 <li><a href="project.html">My recent project</a></li>
                 <li><a href="blog.html">Share my life</a></li>
                 <li><a href="contact.html">Get in touch with me</a></li>

@@ -49,7 +49,6 @@
 							</a>
             </div>
             <!-- end logo -->
-
             <!-- top menu -->
             <div class="navigation">
               <nav>
@@ -60,10 +59,13 @@
                   <li>
                     <a href="about.html"><i class="icon-leaf"></i>About me</a>
                   </li>
-                  <li class="active">
-                    <a href="project.html"><i class="icon-briefcase"></i>Project</a>
+                  <li>
+                    <a href="publications.html"><i class="icon-cog"></i>Publications</i></a>
                   </li>
                   <li>
+                    <a href="project.html"><i class="icon-briefcase"></i>Project</a>
+                  </li>
+                  <li class="active">
                     <a href="blog.html"><i class="icon-book"></i>Blog</a>
                   </li>
                   <li>
@@ -73,7 +75,6 @@
               </nav>
             </div>
             <!-- end menu -->
-
           </div>
         </div>
       </div>
@@ -86,7 +87,7 @@
           <div class="span8">
             <ul class="breadcrumb">
               <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li class="active">Project</i></li>
+              <li class="active">Blog</li>
             </ul>
           </div>
           <div class="span4">
@@ -103,97 +104,51 @@
     <section id="maincontent">
       <div class="container">
         <div class="row">
-          <ul class="portfolio-area da-thumbs">
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project1/project_combine.jpg" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project1.html">
-							<i class="icon-link icon-rounded icon-48 active"></i>
-							</a>
-                      <div class="hidden-tablet">
-                        <p>Remote Control Airship Andriod Application</p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project3/project3_combine.jpg" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project3.html">
-              <i class="icon-link icon-rounded icon-48 active"></i>
-              </a>
-                      <div class="hidden-tablet">
-                        <p>Amazon based Facial Recognition Andriod Application</p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="row">
-          <ul class="portfolio-area da-thumbs">
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project2/project2_combine.jpg" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project2.html">
-							<i class="icon-link icon-rounded icon-48 active"></i>
-							</a>
-                      <div class="hidden-tablet">
-                        <p>PoseNet Mini Game Application</p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="portfolio-item" data-id="id-0" data-type="web">
-              <div class="span6">
-                <div class="thumbnail">
-                  <div class="image-wrapp">
-                    <img src="assets/img/Project/Project4/project4_combine.png" alt="Portfolio name" title="" />
-                    <article class="da-animate da-slideFromRight">
-                      <a href="project4.html">
-              <i class="icon-link icon-rounded icon-48 active"></i>
-              </a>
-                      <div class="hidden-tablet">
-                        <p>
-                          PyTorch Replication of Deep Seeded Region Growing (DSRG)
-                        </p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="span12">
-            <div class="centered">
-              <div class="pagination">
-                <ul>
-                  <li><a href="#">Prev</a></li>
-                  <li class="active"><a>1</a></li>
-                  <li><a href="project2_front.html">2</a></li>
-                  <!-- <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>-->
-                  <li><a href="project2_front.html">Next</a></li>
+          <div class="span4">
+            <aside>
+              <div class="widget">
+                <h4 class="rheading">Categories<span></span></h4>
+                <ul id="catlist" class="cat">
                 </ul>
               </div>
-            </div>
+              <script src="blog.js"></script>
+              <div class="widget">
+                <h4 class="rheading">Recent posts<span></span></h4>
+                <ul class="recent-posts">
+                  <li><a id ="title2" href="#"></a>
+                    <div class="clear">
+                    </div>
+                    <span class="date"><i class="icon-calendar"></i><text id="dates"></text></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget">
+                <h4 class="rheading">Hashtags<span></span></h4>
+                <p id = "here"> </p>
+              </div>
+            </aside>
+          </div>
+          <div class="span8">
+            <!-- start article full post -->
+            <article class="blog-post">
+              <div class="post-heading">
+                <h3 id="title"><a href="#"></a></h3>
+              </div>
+              <div class="clearfix">
+              </div>
+              <img id = "Img" alt="" />
+              <ul class="post-meta">
+                <li class="first"><i class="icon-calendar"></i><span><text id="dates2"></text></span></li>
+                <!--<li id="hereinside" class="last"><i class="icon-tags"></i><span><a href="#">Myself</a>, <a href="#">Blog</a>, <a href="#">First Post</a></span></li>-->
+                <li id="hereinside" class="last"></li>
+              </ul>
+              <div class="clearfix">
+              </div>
+              <p id="contents"></p>
+
+            </article>
+            <!-- end article full post -->
+
           </div>
         </div>
       </div>
@@ -208,7 +163,7 @@
               <h5>Interesting pages</h5>
               <ul class="regular">
                 <li><a href="about.html">About me</a></li>
-                <li><a href="portfolio-detail.html">Find my paper</a></li>
+                <li><a href="publications.html">Find my paper</a></li>
                 <li><a href="project.html">My recent project</a></li>
                 <li><a href="blog.html">Share my life</a></li>
                 <li><a href="contact.html">Get in touch with me</a></li>
@@ -272,10 +227,8 @@
   <script src="assets/js/jquery.prettyPhoto.js"></script>
   <script src="assets/js/jquery.flexslider.js"></script>
   <script src="assets/js/jquery-hover-effect.js"></script>
-  <script src="assets/js/portfolio/jquery.quicksand.js"></script>
-  <script src="assets/js/portfolio/setting.js"></script>
   <script src="assets/js/animate.js"></script>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   <!-- Template Custom JavaScript File -->
   <script src="assets/js/custom.js"></script>
 
