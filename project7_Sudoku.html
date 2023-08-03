@@ -89,7 +89,7 @@
             <ul class="breadcrumb">
               <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
               <li><a href="project.html">Project</a><i class="icon-angle-right"></i></li>
-              <li class="active">Sudoku Automationc using ML algorithms</li>
+              <li class="active">Sudoku Automation using ML algorithms</li>
             </ul>
           </div>
           <div class="span4">
@@ -106,13 +106,13 @@
     <section id="maincontent">
       <div class="container">
         <div>
-          <h1>Sudoku Automationc using ML algorithms</h1>
-          <p> In this project, we develop sudoku (数独/すうどく) automation system to 
-            auto-solve sudoku puzzle from here. First things first, we grab the screenshot 
-            image and track every positions of digits and manually labels every digits 
-            by using OpenCV. Then, we implement KNearest-Neighbors-Optical-Character-Recognizer 
-            (KNN-OCR) to detect and classify all sudoku digit. Now, the 9x9 sudoku board is 
-            ready in our programe. We apply Backtracking to solve the puzzle. Finally, 
+          <h1>Sudoku Automation using ML algorithms</h1>
+          <p> In this project, we develop sudoku (数独/すうどく) automation system to
+            auto-solve sudoku puzzle from here. First things first, we grab the screenshot
+            image and track every positions of digits and manually labels every digits
+            by using OpenCV. Then, we implement KNearest-Neighbors-Optical-Character-Recognizer
+            (KNN-OCR) to detect and classify all sudoku digit. Now, the 9x9 sudoku board is
+            ready in our programe. We apply Backtracking to solve the puzzle. Finally,
             we simulate keyboard actions by pyautogui
             <a href="https://github.com/terenceylchow124/Sudoku-Automation">[Codes]</a>
           </p>
@@ -132,15 +132,15 @@
               <div class="tab-content">
                 <div class="tab-pane active" id="one">
                   <li>
-                    Normally, more screenshots are needed to train our KNN-OCR, 
-                    so manully take few screenshot of sudoku and create "sudoku_train.png" by 
-                    combining those. To skip this step, we provide you few sample screenshots 
+                    Normally, more screenshots are needed to train our KNN-OCR,
+                    so manully take few screenshot of sudoku and create "sudoku_train.png" by
+                    combining those. To skip this step, we provide you few sample screenshots
                     under data/.
                   </li>
                   <li>For data collection, run digit_recongizer.py. Please input corresponding number for each red rectangle of pop up window.</li>
                   <li>Now, training data and labels are all ready. ("sudoku_data.data" & "sudoku_labels")</li>
                   <li>Next, train KNN model by running knn_train.py. To skip this step, you can also use our trained model, "sudoku_digit_model.xml"</li>
-  
+
                 </div>
                 <div class="tab-pane" id="two">
                   <li>Now, go to sudoku.com. And run main.py.</li>
@@ -151,7 +151,7 @@
                       <li>Solve by Backtracking;</li>
                       <li>Simulate keyboard actions.</li>
                   </li>
-                  <li>You may need to adjust WINDOW_X, WINDOW_Y, WINDOW_WIDTH and WINDOW_HEIGHT in main.py 
+                  <li>You may need to adjust WINDOW_X, WINDOW_Y, WINDOW_WIDTH and WINDOW_HEIGHT in main.py
                     in order to take proper screenshot from your screen.
                   </li>
                 <div class="centered">
