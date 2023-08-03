@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Terence Chow's Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- styles -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="assets/css/flexslider.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/color/default.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+  <script src="../p5.js"></script>
+
+  <!-- =======================================================
+    Theme Name: Lumia
+    Theme URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- Navbar
+    ================================================== -->
+      <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- logo -->
+            <div class="logo">
+              <a href="index.html">
+								<img src="assets/img/dummies/logo.png" alt="" width="100" height="26" />
+							</a>
+            </div>
+            <!-- end logo -->
+
+            <!-- top menu -->
+            <div class="navigation">
+              <nav>
+                <ul class="nav topnav">
+                  <li>
+                    <a href="index.html"><i class="icon-home"></i> Home </a>
+                  </li>
+                  <li>
+                    <a href="about.html"><i class="icon-leaf"></i>About me</a>
+                  </li>
+                  <li class="active">
+                    <a href="project.html"><i class="icon-briefcase"></i>Project</a>
+                  </li>
+                  <li>
+                    <a href="contact.html"><i class="icon-envelope-alt"></i> Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end menu -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Subintro
+================================================== -->
+    <section id="subintro">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+              <li><a href="project.html">Project</a><i class="icon-angle-right"></i></li>
+              <li class="active">Amazon based Facial Recognition Andriod Application</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <div class="search">
+              <form action="https://www.google.com/search" method="get" class="input-append">
+                <input class="search-form" id="appendedPrependedInput" type="text" name="q" placeholder="Search here.." />
+                <button class="btn btn-dark" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="maincontent">
+      <div class="container">
+        <div>
+          <h1>Amazon based Facial Recognition Andriod Application</h1>
+          <p>In this project, I design and develop the mobile
+            application system which communicates with the <strong>cloud system (AWS)</strong> as the supporting backend
+            system to perform the <strong>real time face recognition (FR) functionality</strong>.
+            The FR is implemented by two differnet algorithms:
+            i) PCA model, construct and train a PCA model with the hybrid facail database,
+            ii) Deep-Learning model, adopt a provided API, Amazon Rekognition.
+            <a href="https://github.com/terenceylchow124?tab=repositories">[Codes]</a>
+          </p>
+          <div class="centered">
+          <img src="assets/img/Project/Project3_Facial_Reg_App/project3_whole.png" alt="" title="Amazon Cloud Server Architecture" width="700" height="600"/>
+          </div>
+        </div>
+        <div class ="row">
+        <div class="span12">
+          <h4 class="rheading">Details<span></span></h4>
+          <div class="tabbable tabs-top">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i> Face Recognition</a></li>
+              <li><a href="#two" data-toggle="tab">Amazon Cloud Server (AWS) </a></li>
+              <li><a href="#three" data-toggle="tab">Mobile Application</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="one">
+                <li>
+                 Construct the hybrid database by Labeled Faces in the Wild (LFW), Yale Face Database (YFD) & self-collected photos.
+                </li>
+                <li>
+                  Conduct image-preprocessing by color transformation, facail image cropping, resizing & image vectorizing.
+                </li>
+                <li>
+                  Implement the Principal Component Analysis (PCA) model by vector normalizing, covariance matrix computing & largest eigenvector selecting.
+                </li>
+                <li>
+                  Perform face-recognition by encoding given images (I), calculating the Euclidean distance between vectors & resulting label with shortest distance.
+                </li><br>
+                <div class="centered">
+                  <img src="assets/img/Project/Project3_Facial_Reg_App/project3_hybrid.jpg" alt="" title="Hybrid Database" style="margin-right: 1.5em" width="350" height="200"/>
+                  <img src="assets/img/Project/Project3_Facial_Reg_App/project3_pca.jpg" alt="" title="PCA" width="350" height="200"/>
+                </div><br>
+              </div>
+              <div class="tab-pane" id="two">
+                <p>For the backend system, I design an AWS architecture to perform the FR function and response user
+                  only name by intergrating three services. Apart from self-design PCA algorithm, user can chose to finish FR by an Amazon service,
+                  i.e. Amazon Rekognition</p>
+                <li>Implement PCA computing using <strong>Amazon Lambda</strong> which designed as an event-driven service.</li>
+                <li>Store image data including hybrid database and user's uploaded images using <strong>Amazon S3</strong>.</li>
+                <li>Connect with Andriod App using <strong>Amazon API-Gateway</strong>, for which user connects automatically and can upload face images on our system.</li>
+                <li>Apply a built-in Amazon API, <strong>Amazon Rekognition</strong>, for recongitze celebrity faces, which is generally accurate than ours.</li><br>
+                <div class="centered">
+                  <img src="assets/img/Project/Project3_Facial_Reg_App/project3_Recoknition.png" alt="" title="Face Recoknition API Architecture" style="margin-right: 1.5em" width="410" height="390" &nbsp&nbsp&nbsp/>
+                  <img src="assets/img/Project/Project3_Facial_Reg_App/project3_apigateway.jpg" alt="" title="Amazon API-Gateway" width="400" height="390" /><br>
+                </div><br>
+              </div>
+              <div class="tab-pane" id="three">
+                <li>Activates an front camera, detects human facas by using <strong>OpenCv</strong> based classifer (HAAR cascades classifier)</li>
+                <li>Pre-process selected images by cropping and color converting.</li>
+                <li>Uploads the pre-processed iamges to default Amazon server. (specifically AWS S3)</li>
+                <li>Sends request to perform FR to AWS & receives response which is the name string from server.</li>
+                <br>
+                <div class="centered">
+                    <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app.png" alt="" title="Mobile App" style="margin-right: 1.5em" width="440" height="200"/>
+                </div><br>
+              </div>
+            </div>
+          </div>
+          <!-- end tab -->
+        </div>
+        </div>
+        <div class="span12">
+          <h4 class="rheading">Results<span></span></h4>
+          <div class="row">
+              <ul class="portfolio-area da-thumbs">
+                <li class="portfolio-item" data-id="id-0" data-type="web">
+                    <div class="span4">
+                      <div class="thumbnail">
+                        <div class="image-wrapp">
+                          <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app_homes.jpg" alt="Portfolio name" title="Home Page" />
+                          <article class="da-animate da-slideFromRight">
+                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3_Facial_Reg_App/project3_app_home.jpg">
+                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                    </a>
+                            <a href="publications.html">
+                    </a>
+                            <div class="hidden-tablet">
+                              <p>
+                                Home Page
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li class="portfolio-item" data-id="id-0" data-type="brand">
+                  <div class="span4">
+                    <div class="thumbnail">
+                      <div class="image-wrapp">
+                        <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app_detects.jpg" alt="Portfolio name" title="Face Detection" />
+                        <article class="da-animate da-slideFromRight">
+                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3_Facial_Reg_App/project3_app_detect.jpg">
+                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                          </a>
+                          <a href="publications.html"></a>
+                          <div class="hidden-tablet">
+                            <p>Face Detection</p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="portfolio-item" data-id="id-0" data-type="web">
+                    <div class="span4">
+                      <div class="thumbnail">
+                        <div class="image-wrapp">
+                          <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app_captures.jpeg" alt="Portfolio name" title="Captured & Pre-processd" />
+                          <article class="da-animate da-slideFromRight">
+                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3_Facial_Reg_App/project3_app_capture.jpeg">
+                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                    </a>
+                            <a href="publications.html">
+                    </a>
+                            <div class="hidden-tablet">
+                              <p>
+                                Captured and Pre-processed image
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="portfolio-area da-thumbs">
+                <li class="portfolio-item" data-id="id-0" data-type="web">
+                    <div class="span4">
+                      <div class="thumbnail">
+                        <div class="image-wrapp">
+                          <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app_uploads.jpeg" alt="Portfolio name" title="Image Uploaded" />
+                          <article class="da-animate da-slideFromRight">
+                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3_Facial_Reg_App/project3_app_upload.jpeg">
+                    <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                    </a>
+                            <a href="publications.html">
+                    </a>
+                            <div class="hidden-tablet">
+                              <p>
+                                Image Uploaded
+                              </p>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li class="portfolio-item" data-id="id-0" data-type="brand">
+                  <div class="span4">
+                    <div class="thumbnail">
+                      <div class="image-wrapp">
+                        <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app_pcas.jpeg" alt="Portfolio name" title="PCA" />
+                        <article class="da-animate da-slideFromRight">
+                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3_Facial_Reg_App/project3_app_pca.jpeg">
+                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                          </a>
+                          <a href="publications.html"></a>
+                          <div class="hidden-tablet">
+                            <p>PCA</p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="portfolio-item" data-id="id-0" data-type="brand">
+                  <div class="span4">
+                    <div class="thumbnail">
+                      <div class="image-wrapp">
+                        <img src="assets/img/Project/Project3_Facial_Reg_App/project3_app_rekognitions.jpg" alt="Portfolio name" title="Face Rekognition" />
+                        <article class="da-animate da-slideFromRight">
+                          <a class="zoom" data-pretty="prettyPhoto" href="assets/img/Project/Project3_Facial_Reg_App/project3_app_rekognition.jpg">
+                            <i class="icon-zoom-in icon-rounded icon-48 active"></i>
+                          </a>
+                          <a href="publications.html"></a>
+                          <div class="hidden-tablet">
+                            <p>Face Rekognition</p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="centered">
+              <br><a href="project.html" class="btn btn-large e_bounce">See other projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer
+ ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span9">
+            <div class="widget">
+              <h5>Interesting pages</h5>
+              <ul class="regular">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="project.html">My recent project</a></li>
+                <li><a href="contact.html">Get in touch with me</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="widget">
+              <h5>How to find me</h5>
+              <p>
+                <i class="icon-envelope-alt"></i> terenceylchow@gmail.com
+              </p>
+            </div>
+            <div class="widget">
+              <ul class="social">
+                <li><a href="https://www.linkedin.com/in/terence-chow-48a61b1b2/" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
+                <li><a href="https://github.com/terenceylchow124?tab=repositories" data-placement="bottom" title="Github"><i class="icon-pinterest icon-square icon-32"></i></a></li>
+                <li><a href="#" data-placement="bottom" title="Google scholar"><i class="icon-google-plus icon-square icon-32"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="verybottom">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <p>
+                &copy; Lumia - All right reserved
+              </p>
+            </div>
+            <div class="span6">
+              <div class="pull-right">
+                <div class="credits">
+                  <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
+                  -->
+                  Created by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  <p>Customized by Terence Chow
+                    <br>Last updates: 2023/06/08</br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- end wrapper -->
+  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/raphael-min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/google-code-prettify/prettify.js"></script>
+  <script src="assets/js/jquery.elastislide.js"></script>
+  <script src="assets/js/jquery.prettyPhoto.js"></script>
+  <script src="assets/js/jquery.flexslider.js"></script>
+  <script src="assets/js/jquery-hover-effect.js"></script>
+  <script src="assets/js/portfolio/jquery.quicksand.js"></script>
+  <script src="assets/js/portfolio/setting.js"></script>
+  <script src="assets/js/animate.js"></script>
+
+
+  <!-- Template Custom JavaScript File -->
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

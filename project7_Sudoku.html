@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Terence Chow's Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- styles -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="assets/css/flexslider.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/color/default.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+  <script src="../p5.js"></script>
+
+  <!-- =======================================================
+    Theme Name: Lumia
+    Theme URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- Navbar
+    ================================================== -->
+      <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- logo -->
+            <div class="logo">
+              <a href="index.html">
+								<img src="assets/img/dummies/logo.png" alt="" width="100" height="26" />
+							</a>
+            </div>
+            <!-- end logo -->
+
+            <!-- top menu -->
+            <div class="navigation">
+              <nav>
+                <ul class="nav topnav">
+                  <li>
+                    <a href="index.html"><i class="icon-home"></i> Home </a>
+                  </li>
+                  <li>
+                    <a href="about.html"><i class="icon-leaf"></i>About me</a>
+                  </li>
+                  <li class="active">
+                    <a href="project.html"><i class="icon-briefcase"></i>Project</a>
+                  </li>
+                  <li>
+                    <a href="contact.html"><i class="icon-envelope-alt"></i> Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end menu -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Subintro
+================================================== -->
+    <section id="subintro">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="index.html"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+              <li><a href="project.html">Project</a><i class="icon-angle-right"></i></li>
+              <li class="active">Sudoku Automationc using ML algorithms</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <div class="search">
+              <form action="https://www.google.com/search" method="get" class="input-append">
+                <input class="search-form" id="appendedPrependedInput" type="text" name="q" placeholder="Search here.." />
+                <button class="btn btn-dark" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="maincontent">
+      <div class="container">
+        <div>
+          <h1>Sudoku Automationc using ML algorithms</h1>
+          <p> In this project, we develop sudoku (数独/すうどく) automation system to 
+            auto-solve sudoku puzzle from here. First things first, we grab the screenshot 
+            image and track every positions of digits and manually labels every digits 
+            by using OpenCV. Then, we implement KNearest-Neighbors-Optical-Character-Recognizer 
+            (KNN-OCR) to detect and classify all sudoku digit. Now, the 9x9 sudoku board is 
+            ready in our programe. We apply Backtracking to solve the puzzle. Finally, 
+            we simulate keyboard actions by pyautogui
+            <a href="https://github.com/terenceylchow124/Sudoku-Automation">[Codes]</a>
+          </p>
+          <br>
+          <div class="centered">
+            <img src="assets/img/Project/Project7_Sudoku/project7_automation_demo.gif" alt="sudoku" title="sudoku" />
+          </div>
+        </div>
+        <div class ="row">
+          <div class="span12">
+            <h4 class="rheading">Details<span></span></h4>
+            <div class="tabbable tabs-top">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#one" data-toggle="tab"><i class="icon-briefcase"></i>Training Steps</a></li>
+                <li><a href="#two" data-toggle="tab">Testing Steps</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="one">
+                  <li>
+                    Normally, more screenshots are needed to train our KNN-OCR, 
+                    so manully take few screenshot of sudoku and create "sudoku_train.png" by 
+                    combining those. To skip this step, we provide you few sample screenshots 
+                    under data/.
+                  </li>
+                  <li>For data collection, run digit_recongizer.py. Please input corresponding number for each red rectangle of pop up window.</li>
+                  <li>Now, training data and labels are all ready. ("sudoku_data.data" & "sudoku_labels")</li>
+                  <li>Next, train KNN model by running knn_train.py. To skip this step, you can also use our trained model, "sudoku_digit_model.xml"</li>
+  
+                </div>
+                <div class="tab-pane" id="two">
+                  <li>Now, go to sudoku.com. And run main.py.</li>
+                  <li>IMPORTANTLY, mouse-click the digit on top-left corner of sudoku puzzle.</li>
+                  <li>The programe will automically take 4 steps:
+                      <li>Screenshot sudoku;</li>
+                      <li>Recongize digit and generate sudoku board;</li>
+                      <li>Solve by Backtracking;</li>
+                      <li>Simulate keyboard actions.</li>
+                  </li>
+                  <li>You may need to adjust WINDOW_X, WINDOW_Y, WINDOW_WIDTH and WINDOW_HEIGHT in main.py 
+                    in order to take proper screenshot from your screen.
+                  </li>
+                <div class="centered">
+                </div><br>
+                </div>
+              </div>
+            </div>
+            <!-- end tab -->
+          </div>
+        </div>
+        <div class="row">
+          <h4 class="rheading">References<span></span></h4>
+          <div class="span12">
+              <li>Python Sudoku Solver Tutorial with Backtracking
+               <a href="https://www.youtube.com/watch?v=eqUwSA0xI-s&ab_channel=TechWithTim">[1]</a></li>
+              <li>Sudoku Automation <a href="https://www.youtube.com/watch?v=jESGMTcrhSY&ab_channel=TerranovaTech">[2]</a></li>
+              <li>Optical Character Recognition (OCR) with KNN classifier <a href="https://stackoverflow.com/questions/9413216/simple-digit-recognition-ocr-in-opencv-python">[3]</a></li>
+           </div>
+     </div>
+        </div>
+        <div class="row">
+            <div class="centered">
+              <br><a href="project.html" class="btn btn-large e_bounce">See other projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer
+ ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span9">
+            <div class="widget">
+              <h5>Interesting pages</h5>
+              <ul class="regular">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="project.html">My recent project</a></li>
+                <li><a href="contact.html">Get in touch with me</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="widget">
+              <h5>How to find me</h5>
+              <p>
+                <i class="icon-envelope-alt"></i> terenceylchow@gmail.com
+              </p>
+            </div>
+            <div class="widget">
+              <ul class="social">
+                <li><a href="https://www.linkedin.com/in/terence-chow-48a61b1b2/" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
+                <li><a href="https://github.com/terenceylchow124?tab=repositories" data-placement="bottom" title="Github"><i class="icon-pinterest icon-square icon-32"></i></a></li>
+                <li><a href="#" data-placement="bottom" title="Google scholar"><i class="icon-google-plus icon-square icon-32"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="verybottom">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <p>
+                &copy; Lumia - All right reserved
+              </p>
+            </div>
+            <div class="span6">
+              <div class="pull-right">
+                <div class="credits">
+                  <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
+                  -->
+                  Created by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  <p>Customized by Terence Chow
+                    <br>Last updates: 2023/06/08</br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- end wrapper -->
+  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/raphael-min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/google-code-prettify/prettify.js"></script>
+  <script src="assets/js/jquery.elastislide.js"></script>
+  <script src="assets/js/jquery.prettyPhoto.js"></script>
+  <script src="assets/js/jquery.flexslider.js"></script>
+  <script src="assets/js/jquery-hover-effect.js"></script>
+  <script src="assets/js/portfolio/jquery.quicksand.js"></script>
+  <script src="assets/js/portfolio/setting.js"></script>
+  <script src="assets/js/animate.js"></script>
+
+
+  <!-- Template Custom JavaScript File -->
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
